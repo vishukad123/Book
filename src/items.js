@@ -1,17 +1,17 @@
 const items = [
   {
     id: 1,
-    title: "The Great Gatsby",
-    author: "https://www.google.com",
+    title: "React js ",
+    link: "https://reactjs.org/",
     description:
-      "The Great Gatsby is the story of eccentric millionaire Jay Gatsby as told by Nick Carraway, a Midwesterner who lives on Long Island but works in Manhattan. Gatsby's enormous mansion is adjacent to Carraway's modest home, and Carraway becomes curious about his neighbor after being invited to one of his famous parties."
+      "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications, as it is optimal for fetching rapidly changing data that needs to be recorded."
   },
   {
     id: 2,
-    title: "1984",
-    author: "https://www.gmail.com",
+    title: "Redux",
+    link: "https://redux.js.org/",
     description:
-      "In George Orwell's 1984, Winston Smith wrestles with oppression in Oceania, a place where the Party scrutinizes human actions with ever-watchful Big Brother. Defying a ban on individuality, Winston dares to express his thoughts in a diary and pursues a relationship with Julia."
+      "Redux is an open-source JavaScript library for managing application state. It is most commonly used with libraries such as React or Angular for building user interfaces. Similar to Facebook's Flux architecture, it was created by Dan Abramov and Andrew Clark"
   },
 
 ];
