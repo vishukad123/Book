@@ -6,7 +6,6 @@ import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import FavoriteIcon from "@material-ui/icons/Favorite";
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -23,20 +22,17 @@ const TechInfo = ({ selectedItem }) => {
          <Card className={classes.card}>
           <CardHeader
               title={selectedItem.title}
-              subheader={selectedItem.author}
+             
          />
          
             <div>
-               <a href={selectedItem.author} target="_blank">{selectedItem.author}</a>
+               <a href={selectedItem.link} target="_blank">{selectedItem.link}</a>
               <hr />
               <CardContent>
               <Typography variant="body2" color="textSecondary" component="p">
                  {selectedItem.description}
                  </Typography> 
               </CardContent>
-              <IconButton aria-label="add to favorites">
-                 <FavoriteIcon />
-               </IconButton>
             </div>
          
           </Card> 

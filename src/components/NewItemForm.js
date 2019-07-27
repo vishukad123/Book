@@ -7,7 +7,8 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
-
+import DialogContentText from '@material-ui/core/DialogContentText';
+// New Item Addition Form 
 const NewItemForm= props => {
   const [open, setOpen] = React.useState(false);
   const [inputs, setInputs] = React.useState({})
@@ -22,7 +23,6 @@ const NewItemForm= props => {
   const handleSubmit = e => {
     e && e.preventDefault();
     props.addItem(inputs);
-    //props.handleToggleBookForm();
     handleClose();
   };
 
@@ -45,13 +45,16 @@ const NewItemForm= props => {
       >
         <DialogTitle id="form-dialog-title">Add New Technology</DialogTitle>
         <DialogContent>
+        <DialogContentText>
+           Add New Technology here with the proper provided information . 
+          </DialogContentText>
           <TextField
            onChange={handleInputChange}
            name="title"
            type="text"
            placholder="title"
            value={inputs.title}
-           label="Name Of Technology"
+           label="Name Of Technology"            
            required
           />
           <TextField
@@ -67,11 +70,12 @@ const NewItemForm= props => {
           <TextField
           onChange={handleInputChange}
             autoFocus
-            name="author"
+            name="link"
             margin="dense" 
-            label="author"
+            label="link  "
+            defaultValue="https://"
             type="text"
-            value={inputs.author}
+            value={inputs.link}
           />
         </DialogContent>
         <DialogActions>

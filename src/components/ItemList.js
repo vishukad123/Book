@@ -8,9 +8,12 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Divider from '@material-ui/core/Divider';
+import StarIcon from '@material-ui/icons/Star';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+
 
 const ItemList = props => {
-  // State for toggling book form
+  // State for toggling item form
   const { items, selectItem, setitems } = props;
   const useStyles = makeStyles(theme => ({
     root: {
@@ -28,6 +31,7 @@ const ItemList = props => {
   const classes = useStyles();
   // componentDidMount
   useEffect(() => {
+    // Provided the default props from the items.js file
     setitems(itemsData);
   }, []);
   return (
@@ -38,9 +42,14 @@ const ItemList = props => {
           key={i}
           item={item}
         >
+        {/*  Rednder the Item List  */}
          <List className={classes.root}>
              <ListItem  button>
-               <ListItemText primary={item.title}/>
+               <ListItemText primary={item.title}/>    
+               <ListItemIcon>
+                   <StarIcon />
+                </ListItemIcon>
+ 
              </ListItem>
             <Divider variant="inset" component="li" />
          </List>
